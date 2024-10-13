@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Billing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Modal Popup -->
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <h2>Welcome to Our Hotel</h2>
+            <p>Do you want to continue to the site?</p>
+            <button id="continue-btn">Continue</button>
+            <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+    <div id="welcome-message"></div>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#todays-meal" onclick="showSection('todays-meal')">Today's Meal</a>
+        <a href="#order" onclick="showSection('order-section')">Order</a>
+    </nav>
+    <!-- Home Section -->
+    <div class="section" id="home">
+        <h1>Welcome to Our Hotel</h1>
+        <p>Experience the best dining experience in town!</p>
+        <p>Enjoy your stay as you interact with the best chefs in town.</p>
+    </div>
+    <!-- Today's Meal Section -->
+    <div class="section" id="todays-meal" style="display: none;">
+        <h1>Today's Meal</h1>
+        <div id="meals"></div> <!-- Add this line -->
+    </div>
+    <!-- Order Section -->
+    <div class="section" id="order-section" style="display: none;">
+        <h1>Place Your Order</h1>
+        <form id="orderForm">
+            <label>
+                <span>Ice Cream - KSh 200</span>
+                <input type="checkbox" value="Ice Cream" data-price="200">
+            </label>
+            <label>
+                <span>Pizza - KSh 500</span>
+                <input type="checkbox" value="Pizza" data-price="500">
+            </label><br>
+            <label>
+                <span>Watermelon - KSh 500</span>
+                <input type="checkbox" value="Watermelon" data-price="500">
+            </label><br>
+            <label>
+                <span>Burger - KSh 300</span>
+                <input type="checkbox" value="Burger" data-price="300">
+            </label><br>
+            <label>
+                <span>Bananas - KSh 50</span>
+                <input type="checkbox" value="Bananas" data-price="50">
+            </label><br>
+            <label>
+                <span>Apples - KSh 100</span>
+                <input type="checkbox" value="Apples" data-price="100">
+            </label><br>
+            <label>
+                <span>Oranges - KSh 80</span>
+                <input type="checkbox" value="Oranges" data-price="80">
+            </label><br>
+            <label>
+                <span>Mangoes - KSh 120</span>
+                <input type="checkbox" value="Mangoes" data-price="120">
+            </label><br>
+            <label>
+                <span>Grapes - KSh 150</span>
+                <input type="checkbox" value="Grapes" data-price="150">
+            </label><br>
+            <label>
+                <span>Pineapples - KSh 200</span>
+                <input type="checkbox" value="Pineapples" data-price="200">
+            </label><br>
+            <label>
+                <span>Strawberries - KSh 250</span>
+                <input type="checkbox" value="Strawberries" data-price="250">
+            </label><br>
+            <label>
+                <span>Peaches - KSh 220</span>
+                <input type="checkbox" value="Peaches" data-price="220">
+            </label><br>
+            <label>
+                <span>Kiwi - KSh 300</span>
+                <input type="checkbox" value="Kiwi" data-price="300">
+            </label><br>
+            <label>
+                <span>Grilled Chicken - KSh 400</span>
+                <input type="checkbox" value="Grilled Chicken" data-price="400">
+            </label><br>
+            <label>
+                <span>Beef Steak - KSh 500</span>
+                <input type="checkbox" value="Beef Steak" data-price="500">
+            </label><br>
+            <label>
+                <span>Fish Fillet - KSh 450</span>
+                <input type="checkbox" value="Fish Fillet" data-price="450">
+            </label><br>
+            <label>
+                <span>Egg Omelette - KSh 500</span>
+                <input type="checkbox" value="Egg Omelette" data-price="500">
+            </label><br>
+            <label>
+                <span>Lamb Chops - KSh 600</span>
+                <input type="checkbox" value="Lamb Chops" data-price="600">
+            </label><br>
+            <label>
+                <span>Tofu Stir Fry - KSh 350</span>
+                <input type="checkbox" value="Tofu Stir Fry" data-price="350">
+            </label><br>
+            <label>
+                <span>Pork Chops - KSh 550</span>
+                <input type="checkbox" value="Pork Chops" data-price="550">
+            </label><br>
+            <label>
+                <span>Turkey Breast - KSh 480</span>
+                <input type="checkbox" value="Turkey Breast" data-price="480">
+            </label><br>
+            <label>
+                <span>Shrimp Scampi - KSh 700</span>
+                <input type="checkbox" value="Shrimp Scampi" data-price="700">
+            </label><br>
+            <label>
+                <span>Vegetable Platter - KSh 250</span>
+                <input type="checkbox" value="Vegetable Platter" data-price="250">
+            </label><br>
+            <button type="button" onclick="generateReceipt()">Generate Receipt</button>
+        </form>
+        <div id="order"></div>
+        <div id="receipt"></div>
+    </div>
+   
+    <script src="styles.js"></script>
+    <footer class="footer-content">
+        <p>&copy; 2024 Hotel Billing System. All rights reserved.</p>
+        <p>124 Kitale, Kenya</p>
+        <p>Contact: <a href="mailto:info@hotelbillingsystem.com">info@hotelbillingsystem.com</a></p>
+    </footer>
+</body>
+</html>
